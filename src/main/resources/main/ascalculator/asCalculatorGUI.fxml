@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="361.0" stylesheets="@MainAppstyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ascalculator.MainAppController">
+   <children>
+      <Pane fx:id="titlePane" prefHeight="38.0" prefWidth="361.0">
+         <children>
+            <ImageView fx:id="close" fitHeight="22.0" fitWidth="52.0" layoutX="332.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="minimise" fitHeight="22.0" fitWidth="22.0" layoutX="310.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/minimize.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="36.0" layoutY="4.0" prefHeight="17.0" prefWidth="64.0" text="Calculator" textFill="#f8eeee" />
+         </children></Pane>
+      <Pane fx:id="mainPane" layoutY="28.0" prefHeight="515.0" prefWidth="361.0" styleClass="mainPane" stylesheets="@MainAppstyle.css">
+         <children>
+            <Pane layoutX="5.0" layoutY="9.0" prefHeight="132.0" prefWidth="349.0">
+               <children>
+                  <Label fx:id="calcInput" alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="7.0" prefHeight="57.0" prefWidth="349.0" text="0" textFill="#fffbfb">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="calcOutput" alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="66.0" prefHeight="57.0" prefWidth="349.0" text="0" textFill="#fffafa">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn9" layoutX="15.0" layoutY="150.0" onMouseClicked="#numBtnPrsd" prefHeight="75.0" prefWidth="70.0" styleClass="button">
+               <children>
+                  <Label alignment="CENTER" layoutX="9.0" layoutY="14.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="9" textFill="#fff4f4">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane fx:id="btn8" layoutX="100.0" layoutY="150.0" onMouseClicked="#numBtnPrsd" prefHeight="75.0" prefWidth="70.0" styleClass="button">
+               <children>
+                  <Label alignment="CENTER" layoutX="9.0" layoutY="13.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="8" textFill="#fff4f4">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane fx:id="btn7" layoutX="186.0" layoutY="150.0" onMouseClicked="#numBtnPrsd" prefHeight="75.0" prefWidth="70.0" styleClass="button">
+               <children>
+                  <Label alignment="CENTER" layoutX="9.0" layoutY="13.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="7" textFill="#fff4f4">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btnadd" layoutX="272.0" layoutY="150.0" onMouseClicked="#symBtnPrsd" prefHeight="75.0" prefWidth="70.0" stylesheets="@MainAppstyle.css">
+               <children>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="13.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="+" textFill="#fff4f4">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="operatorButton" />
+               </styleClass></Pane>
+            <Pane fx:id="btnsub" layoutX="272.0" layoutY="239.0" onMouseClicked="#symBtnPrsd" prefHeight="75.0" prefWidth="70.0" stylesheets="@MainAppstyle.css">
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="operatorButton" />
+               </styleClass>
+               <children>
+                  <Label alignment="CENTER" layoutX="9.0" layoutY="13.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="-" textFill="#fff4f4">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn6" layoutX="15.0" layoutY="234.0" onMouseClicked="#numBtnPrsd" prefHeight="75.0" prefWidth="70.0" styleClass="button" stylesheets="@MainAppstyle.css">
+               <children>
+                  <Label alignment="CENTER" layoutX="8.0" layoutY="13.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="6" textFill="#fff4f4">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn5" layoutX="100.0" layoutY="234.0" onMouseClicked="#numBtnPrsd" prefHeight="75.0" prefWidth="70.0" styleClass="button" stylesheets="@MainAppstyle.css">
+               <children>
+                  <Label alignment="CENTER" layoutX="9.0" layoutY="13.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="5" textFill="#fff4f4">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn4" layoutX="186.0" layoutY="234.0" onMouseClicked="#numBtnPrsd" prefHeight="75.0" prefWidth="70.0" styleClass="button" stylesheets="@MainAppstyle.css">
+               <children>
+                  <Label alignment="CENTER" layoutX="9.0" layoutY="13.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="4" textFill="#fff4f4">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="btn3" layoutX="15.0" layoutY="349.0" onMouseClicked="#numBtnPrsd" prefHeight="75.0" prefWidth="70.0" styleClass="button" stylesheets="@MainAppstyle.css">
+         <children>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="13.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="3" textFill="#fff4f4">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="btn2" layoutX="100.0" layoutY="349.0" onMouseClicked="#numBtnPrsd" prefHeight="75.0" prefWidth="70.0" styleClass="button" stylesheets="@MainAppstyle.css">
+         <children>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="13.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="2" textFill="#fff4f4">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="btn1" layoutX="186.0" layoutY="349.0" onMouseClicked="#numBtnPrsd" prefHeight="75.0" prefWidth="70.0" styleClass="button" stylesheets="@MainAppstyle.css">
+         <children>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="14.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="1" textFill="#fff4f4">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="btnmul" layoutX="272.0" layoutY="349.0" onMouseClicked="#symBtnPrsd" prefHeight="75.0" prefWidth="70.0">
+         <children>
+            <Label id="operator-button" alignment="CENTER" layoutX="10.0" layoutY="13.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="×" textFill="#fff4f4">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="operatorButton" />
+         </styleClass></Pane>
+      <Pane fx:id="btn0" layoutX="14.0" layoutY="440.0" onMouseClicked="#numBtnPrsd" prefHeight="75.0" prefWidth="70.0" styleClass="button" stylesheets="@MainAppstyle.css">
+         <children>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="13.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="0" textFill="#fff4f4">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="99.0" layoutY="440.0" onMouseClicked="#clear" prefHeight="75.0" prefWidth="70.0" styleClass="button" stylesheets="@MainAppstyle.css">
+         <children>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="14.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="C" textFill="#fff4f4">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane fx:id="btnequals" layoutX="185.0" layoutY="440.0" onMouseClicked="#symBtnPrsd" prefHeight="75.0" prefWidth="70.0" stylesheets="@MainAppstyle.css">
+         <children>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="13.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="=" textFill="#fff4f4">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="operatorButton" />
+         </styleClass></Pane>
+      <Pane fx:id="btndiv" layoutX="271.0" layoutY="440.0" onMouseClicked="#symBtnPrsd" prefHeight="75.0" prefWidth="70.0" stylesheets="@MainAppstyle.css">
+         <children>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="13.0" prefHeight="50.0" prefWidth="52.0" styleClass="labeltext" stylesheets="@MainAppstyle.css" text="÷" textFill="#fff4f4">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="button" />
+            <String fx:value="operatorButton" />
+         </styleClass></Pane>
+   </children>
+</AnchorPane>
